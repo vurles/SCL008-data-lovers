@@ -2,10 +2,11 @@ h1, h2, h3, p {
     font-family: 'Luckiest Guy', cursive;
 }
 .logo{
-    height: 10%;
-    width: 10%;
+    height: 60%;
+    width: 60%;
+    margin-top: 15%;
 }
 .titulo{
-    display: inline-block;
-    margin-left: 25%;
+    text-align: left;
+    margin-top: 8%;
 }
