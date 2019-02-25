@@ -8,20 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
   </head>
   <body>
-<<<<<<< Updated upstream
-      <header class="container">
-          <div class="row">
-            <div class="col-3">
-              <img class="logo" src="img/logo-nav.png" alt="pokemon_region_kanto">
-            </div>
-            <div class="col-9">
-              <h1 class="titulo">LEARNING GO</h1>
-            </div>
-          </div>
-        </header>
-   <div id="root"></div>
-=======
-    <header class="container">
+    <header class="container menu">
       <div class="row">
         <div class="col-3">
           <img class="logo" src="img/logo-nav.png" alt="pokemon_region_kanto">
@@ -32,11 +19,11 @@
       </div>
     </header>
     <section class="container">
-      <div class="row" id="root">
-        <div class="col-9">
+      <div class="row">
+        <div class="col-9 container-fluid"  id="root" >
           <!--aqui debe ir mi data-->
         </div>
-        <div class="col-3">
+        <div class="col-3 filtro">
           <select id="type">
             <option value="0">Por tipo</option>
             <option value="Water">Agua</option>
@@ -55,15 +42,22 @@
             <option value="Poison">Veneno</option>
             <option value="Flying">Volador</option>
           </select> 
+
         </div>
       </div>
     </section>
 
+<!-- boton subir-->
+    <div>
+      <button id="scrollToTop" class="scrollToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+           <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+           <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+     </button>
+    </div>
 
-    <div ></div>
 
-
->>>>>>> Stashed changes
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -74,5 +68,6 @@
     <!-- <script src="./data/lol/lol.js"></script> -->
     <script src="data.js"></script>
     <script src="main.js"></script>
+    <script src="boton.js"></script>
   </body>
 </html>
