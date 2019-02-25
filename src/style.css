@@ -7,6 +7,11 @@ h1, h2, h3, p {
     margin-top: 15%;
 }
 .titulo{
+<<<<<<< Updated upstream
     text-align: left;
     margin-top: 8%;
+=======
+text-align: left;
+margin-top: 8%;
+>>>>>>> Stashed changes
 }
