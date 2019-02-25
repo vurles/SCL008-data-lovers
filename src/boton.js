@@ -22,3 +22,4 @@ var scrollToTop = (function() {
         scrollTop(scrollSpeed)
     }
 })();
+    window.onload = scrollToTop

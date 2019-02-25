@@ -1,12 +1,12 @@
 /* Manejo del DOM */
-const DATA = window.POKEMON.pokemon;//me traigo la data de pokemon y la guargo en una const
+const DATA = POKEMON.pokemon;//me traigo la data de pokemon y la guargo en una const
 //console.log(DATA);
 const pokebox = document.getElementById('root'); // creo una constatante para llammar a mi contenedor root
 
 const seeData = (DATA) => {
 
     let result = '';
-    DATA.forEach(element => {
+    DATA.forEach(element => {//element es === a DAATA[i]
         result = pokebox.innerHTML += `
         <div>
             <div class="card">
