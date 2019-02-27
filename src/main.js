@@ -5,7 +5,13 @@ const pokebox = document.getElementById('root'); // creo una constatante para ll
 
 const pokeType = document.getElementById('type'); // llamo a mi select para poder filtrar por el valor que me da
 
+//hola vamos a mostrar pagina 1 y 2 a travez de display none y display block 
+document.getElementById("start").addEventListener("click",(evento)=>{
+  evento.preventDefault();
+  document.getElementById("pag1").style.display="none";// el que se muestra primero
+  document.getElementById("pag2").style.display="block";// esta forma hace que se vea en bloques las paginas
 
+})
 
 const seeData = (data) => {
 
@@ -17,7 +23,7 @@ const seeData = (data) => {
                       <div class="cara">
                       <h3 class="tituloPoke" >
                       ${element.name}
-                      </h3>
+                      </h3> 
                         <img src="${element.img}">
                       </div>
                       <div class="cara detras">

@@ -10,7 +10,11 @@ h1, h2, h3, p {
 text-align: left;
 margin-top: 8%;
 }
-.card{
+#pag2{/*los id se llaman con #*/
+  display: none;
+
+}
+.card{/* las clases las llamamos con puntos*/
     width: 300px;
     height: 300px;
     margin: 1em;
