@@ -32,6 +32,23 @@ margin-top: 8%;
     background-color: rgb(86, 242, 247);
 
 }
+.pelota_rebote{
+  background-color: rgb(86, 242, 247);
+
+}
+.start{
+  margin-left: 20%;
+  background-color: #3D58E2;
+  font-family: 'Luckiest Guy', cursive;
+  margin-top: 10px;
+  
+
+}
+.intro{
+  text-align: center;
+  padding: 8%;
+
+}
 .filtro{
     background-color: rgb(247, 120, 190);
 }
