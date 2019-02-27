@@ -14,6 +14,9 @@ margin-top: 8%;
   display: none;
 
 }
+/*#start{
+  margin: 15%;
+}*/
 .card{/* las clases las llamamos con puntos*/
     width: 300px;
     height: 300px;
@@ -40,11 +43,44 @@ margin-top: 8%;
   background-color: rgb(86, 242, 247);
 
 }
+/* efecto rebote pelota pokemon*/
+.rebote img{
+  width: 250px;
+  height: 250px;
+  margin-left: 50px;
+  margin-top: 100px;
+  position: relative;
+  -webkit-animation-name: rebote; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+  -webkit-animation-direction: reverse; /* Chrome, Safari, Opera */
+  animation-name: rebote;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease-out;
+}
+.rebote span{
+  background-color: #2F2B2B;
+  display: block;
+  margin-top: -4px;
+  height: 15px;
+  width: 200px;
+}
+/* Standard syntax */
+@keyframes rebote {/*La regla arroba @keyframes permite a los autores controlar los pasos intermedios en una secuencia de animación CSS mediante el establecimiento de keyframes (o puntos de trayectoria) a lo largo de la secuencia de animación que debe ser alcanzado por determinados puntos durante la animación. Esto le da un control más específico sobre los pasos intermedios de la secuencia de animación que se obtiene al dejar que el navegador maneje todo automáticamente.*/
+  0%   {left:0px; top:0px;}
+  25%  {left:0px; top:0px;}
+  50%  {left:0px; top:-100px;}
+  75%  {left:0px; top:-100px;}
+  100% {left:0px; top:0px;}
+}
+/* Fin efecto rebote pelota pokemon*/
 .start{
   margin-left: 20%;
   background-color: #3D58E2;
   font-family: 'Luckiest Guy', cursive;
-  margin-top: 10px;
+  
   
 
 }
