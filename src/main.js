@@ -5,14 +5,11 @@ const pokebox = document.getElementById('root'); // creo una constatante para ll
 
 const pokeType = document.getElementById('type'); // llamo a mi select para poder filtrar por el valor que me da
 
-<<<<<<< Updated upstream
 const pokehuevo = document.getElementById('huevo');//llamo a mi id huevo que esta en html
-=======
 
 
 
 const pokeOrden = document.getElementById('order');
->>>>>>> Stashed changes
 
 //hola vamos a mostrar pagina 1 y 2 a travez de display none y display block 
 document.getElementById("start").addEventListener("click",(evento)=>{
