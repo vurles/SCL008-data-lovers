@@ -25,12 +25,22 @@ const filtereggs = (data,condition) => {
   })
   return filterhuevo;
 }
-window.filterPokemon =filterPokemon()
-window.filtereggs =filtereggs()
+//ordenando por tres parametros :)
+
+const sortPokemon = (data, sortBy, sortOrder) => {
+  
+}
+
+
+window.filterPokemon =filterPokemon;
+window.filtereggs =filtereggs;
 /**
  * *const order = () => {
 
-
+sortData(data, sortBy, sortOrder): esta función sort u ordenar recibe tres parámetros. 
+El primer parámetro, data, nos entrega los datos. El segundo parámetro, sortBy, nos dice con respecto a
+ cuál de los campos de la data se quiere ordenar. 
+ El tercer parámetro, sortOrder, indica si se quiere ordenar de manera ascendente o descendente.
 }
 esto es del MDN para ordenar segun criterio que le pase en mis condiciones
  * function compare(a, b) {
