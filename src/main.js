@@ -7,8 +7,6 @@ const pokeType = document.getElementById('type'); // llamo a mi select para pode
 
 const pokehuevo = document.getElementById('huevo');//llamo a mi id huevo que esta en html
 
-
-
 const pokeOrden = document.getElementById('order');
 
 //hola vamos a mostrar pagina 1 y 2 a travez de display none y display block 
@@ -49,7 +47,7 @@ pokeType.addEventListener('change', () => {// a mi poketype le paso el evento es
     let condition = pokeType.value
     let filtered = filterPokemon(data, condition);
     pokebox.innerHTML = ''; // limpiando el div
-    filtered.forEach(element => {
+    filtered.forEach(element => { //foreach es un for para array que devuelve un nuevo array con element que es igua a DATA[i]
         pokebox.innerHTML += `
         <div class="carta-box">
         <div class="carta">    
@@ -93,13 +91,32 @@ filtrohuevo.forEach(element => {
         `
 })
 })
-// pokeOrden.addEventListener('change', () => {
-//     let option = pokeOrden.value;
-//     let ordenando = //aqui va mi funcion order junto con sus parametros
 
-
-// })
-
+//Conexion de los select para ordenar con funcion sortPokemon proveniente de data.js 
+pokeOrden.addEventListener('change', () => {
+    let option = pokeOrden.value;
+     let ordering = sortPokemon(data, sortBy, option); //aqui va mi funcion order junto con sus parametros
+     pokebox.innerHTML = '';
+     ordering.forEach(element => { 
+         pokebox.innerHTML += `
+         <div class="carta-box">
+         <div class="carta">    
+           <div class="cara">
+           <h3 class="tituloPoke" >
+           Nombre: <hr/> ${element.name}
+           </h3> 
+             <img src="${element.img}">
+           </div>  
+           <div class="cara detras">
+             <img src="${element.img}">
+             <p>Poke tipo: ${element.type}</p>
+             <p>Poke numero: ${element.num}</p>
+           </div>    
+         </div>
+       </div>
+         `
+     })
+})
 
 
 window.onload = seeData(data);
