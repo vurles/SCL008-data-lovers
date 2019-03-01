@@ -7,6 +7,10 @@ const pokeType = document.getElementById('type'); // llamo a mi select para pode
 
 const pokehuevo = document.getElementById('huevo');//llamo a mi id huevo que esta en html
 
+
+
+const pokeOrden = document.getElementById('order');
+
 //hola vamos a mostrar pagina 1 y 2 a travez de display none y display block 
 document.getElementById("start").addEventListener("click",(evento)=>{
   evento.preventDefault();
@@ -24,14 +28,15 @@ const seeData = (data) => {
                     <div class="carta">    
                       <div class="cara">
                       <h3 class="tituloPoke" >
-                      ${element.name}
+                      Nombre: ${element.name}
                       </h3> 
                         <img src="${element.img}">
                       </div>
                       <div class="cara detras">
-                        <p>${element.type}</p>
-                        <p>${element.weaknesses}</p>
-                        <p>${element.candy}</p>
+                        <img src="${element.img}">
+                        <p>Tipo: ${element.type}</p>
+                        <p>Debilidad: ${element.weaknesses}</p>
+                        <p> Candy: ${element.candy}</p>
                       </div>    
                     </div>
                   </div>
@@ -40,29 +45,28 @@ const seeData = (data) => {
     });
     return result;
 }
-pokeType.addEventListener('change', () => {
+pokeType.addEventListener('change', () => {// a mi poketype le paso el evento escuchar 
     let condition = pokeType.value
     let filtered = filterPokemon(data, condition);
-    
-    pokebox.innerHTML = '';// limpiando el div
+    pokebox.innerHTML = ''; // limpiando el div
     filtered.forEach(element => {
         pokebox.innerHTML += `
         <div class="carta-box">
         <div class="carta">    
           <div class="cara">
           <h3 class="tituloPoke" >
-          ${element.name}
-          </h3>
+          Nombre: <hr/> ${element.name}
+          </h3> 
             <img src="${element.img}">
           </div>  
           <div class="cara detras">
-            <p>${element.type}</p>
-            <p>${element.weaknesses}</p>
-            <p>${element.candy}</p>
+            <img src="${element.img}">
+            <p>Tipo: ${element.type}</p>
+            <p>Debilidad: ${element.weaknesses}</p>
+            <p> Candy: ${element.candy}</p>
           </div>    
         </div>
       </div>
-
         `
     })
 })
@@ -89,6 +93,13 @@ filtrohuevo.forEach(element => {
         `
 })
 })
+// pokeOrden.addEventListener('change', () => {
+//     let option = pokeOrden.value;
+//     let ordenando = //aqui va mi funcion order junto con sus parametros
+
+
+// })
+
 
 
 window.onload = seeData(data);

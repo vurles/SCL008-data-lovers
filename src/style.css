@@ -14,9 +14,9 @@ margin-top: 8%;
   display: none;
 
 }
-/*#start{
-  margin: 15%;
-}*/
+#start{
+  margin: 8%
+}
 .card{/* las clases las llamamos con puntos*/
     width: 300px;
     height: 300px;
@@ -33,8 +33,8 @@ margin-top: 8%;
     margin-top: 8%;
 }
 .container-fluid{
-    display: flex;
     flex-flow: row wrap;
+    display: flex;
     justify-content: space-evenly;
     background-color: rgb(86, 242, 247);
 
@@ -85,12 +85,12 @@ margin-top: 8%;
 
 }
 .intro{
-  text-align: center;
+  text-align: left;
   padding: 8%;
 
 }
 .filtro{
-    background-color: rgb(247, 120, 190);
+    background-color:rgb(230, 205, 230);
 }
 .menu{
     background-color: gray;
