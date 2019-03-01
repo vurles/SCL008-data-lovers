@@ -18,4 +18,12 @@ const filterPokemon = (DATA, condition) => { //data ?
   })
   return filteredPoke;
 };
-window.filterPokemon = filterPokemon()
+const filtereggs = (data,condition) => {
+  let filterhuevo = data.filter(element => {
+    return element.egg.includes(condition)
+
+  })
+  return filterhuevo;
+}
+window.filterPokemon =filterPokemon()
+window.filtereggs =filtereggs()
