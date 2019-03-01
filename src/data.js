@@ -27,3 +27,24 @@ const filtereggs = (data,condition) => {
 }
 window.filterPokemon =filterPokemon()
 window.filtereggs =filtereggs()
+/**
+ * *const order = () => {
+
+
+}
+esto es del MDN para ordenar segun criterio que le pase en mis condiciones
+ * function compare(a, b) {
+  if (a es menor que b según criterio de ordenamiento) {
+    return -1;
+  }
+  if (a es mayor que b según criterio de ordenamiento) {
+    return 1;
+  }
+  // a debe ser igual b
+  return 0;
+}--------fin-------
+
+ * 
+ * 
+ * 
+ */
