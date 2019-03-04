@@ -7,6 +7,9 @@ const pokeType = document.getElementById('type'); // llamo a mi select para pode
 
 const pokehuevo = document.getElementById('huevo');//llamo a mi id huevo que esta en html
 
+//const pokeweight = document.getElementById('weight');//calculo por peso y lo llamo desde mi html
+
+
 
 
 const pokeOrden = document.getElementById('order');
@@ -93,6 +96,41 @@ filtrohuevo.forEach(element => {
         `
 })
 })
+//implementacion de calculo por peso//
+//pokehuevo.addEventListener('change',() => {
+  //let condition = pokeweight.value //pokeweight se saca de la parte superior (const pokeweight = document.getElementById('weight')
+  //let filterporpesote = filterporpeso(data,condition);
+  //pokebox.innerHTML = '';// limpiando el div
+  //filterporpesote.forEach(element => {
+    //pokebox.innerHTML += `
+         // <div class="carta-box">
+          //<div class="carta">    
+           // <div class="cara">
+            //<h3 class="tituloPoke" >
+            //${element.name}
+            //</h3>
+              //<img src="${element.img}"> 
+           // </div>  
+            //<div class="cara detras">
+             // <p>${element.weight}</p>
+            //</div>    
+          //</div>
+        //</div>
+  
+       //   `
+ // })
+  //})
+ // termino de mi implementacion de calculo por peso//
+ //inicio de mi porcentaje
+ function porcentaje() {
+  const num_3 = document.getElementById("num_3").value;
+  const num_4 = document.getElementById("num_4").value;
+  const result = num_3 * num_4 / 100;
+
+  document.getElementById("num_5").value = result;
+}
+//termino de mi porcentaje
+
 // pokeOrden.addEventListener('change', () => {
 //     let option = pokeOrden.value;
 //     let ordenando = //aqui va mi funcion order junto con sus parametros
