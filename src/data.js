@@ -24,6 +24,41 @@ const filtereggs = (data,condition) => {
 
   })
   return filterhuevo;
+};
+//inicio de calculo por peso
+//const filterporpeso = (data,condition) => {
+  //let filterporpesote = data.filter(element => {
+    //return element.weight.includes(condition)
+
+  //})
+  //return filterporpesote;
+//}
+//termino calculo por peso
+
+//otra prueba por calcular porcentaje//
+//const porcentajePokemon{// porcentaje de pokemon
+
+//const numeroElementos = (data,condition) => {//funcion cuenta el numero de total de la muestra
+ // let numeroElement = data.lenght(element => {
+  //  return data.lenght(condition);
+  //  console.log(numeroElementos);
+  //})
+
+ // Const elementosFiltrados = (data,condition) =>{// cuenta el numero total de los elementos filtrados
+   // let elementfilter = data.filter(element =>{
+   //   return element.filter.lenght.includes(condition)
+   // })
+  //}
+
+  //return (elementosFiltrados/numeroElementos)*100;// te da el respuesta
+//}
+//}
+// termino de mi otra prueba para calcular porcentaje//
+
+window.filterPokemon = filterPokemon()
+window.filtereggs = filtereggs()
+window.filterporpeso = filterporpeso()
+
 }
 //ordenando por tres parametros :)
 
