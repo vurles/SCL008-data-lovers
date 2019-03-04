@@ -47,7 +47,7 @@ const seeData = (data) => {
 
     });
     return result;
-}
+};
 pokeType.addEventListener('change', () => {// a mi poketype le paso el evento escuchar 
     let condition = pokeType.value
     let filtered = window.filterPokemon(data, condition);
