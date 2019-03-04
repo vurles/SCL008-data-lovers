@@ -55,11 +55,11 @@ const filtereggs = (data,condition) => {
 //}
 // termino de mi otra prueba para calcular porcentaje//
 
-window.filterPokemon = filterPokemon()
-window.filtereggs = filtereggs()
-window.filterporpeso = filterporpeso()
+// window.filterPokemon = filterPokemon()
+// window.filtereggs = filtereggs()
+// window.filterporpeso = filterporpeso()
 
-}
+
 //ordenando por tres parametros :)
 
  const sortPokemon = (data, sortBy, sortOrder) => {
