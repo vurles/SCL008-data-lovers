@@ -62,13 +62,21 @@ window.filterporpeso = filterporpeso()
 }
 //ordenando por tres parametros :)
 
-const sortPokemon = (data, sortBy, sortOrder) => {
-  
+ const sortPokemon = (data, sortBy, sortOrder) => {
+  let orderPoke = data.sort((a, b) => {
+    return a[sortBy].localeCompare(b[sortBy]);
+  }) 
+  if(sortOrder === 'za'){
+    orderPoke.reverse();
+  }
+  return orderPoke;
 }
+
 
 
 window.filterPokemon =filterPokemon;
 window.filtereggs =filtereggs;
+window.sortPokemon =sortPokemon;
 /**
  * *const order = () => {
 

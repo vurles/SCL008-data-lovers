@@ -1,5 +1,5 @@
 /* Manejo del DOM */
-const data = POKEMON.pokemon;//me traigo la data de pokemon y la guargo en una const
+const data = window.POKEMON.pokemon;//me traigo la data de pokemon y la guargo en una const
 //console.log(DATA);
 const pokebox = document.getElementById('root'); // creo una constatante para llammar a mi contenedor root
 
@@ -50,7 +50,7 @@ const seeData = (data) => {
 }
 pokeType.addEventListener('change', () => {// a mi poketype le paso el evento escuchar 
     let condition = pokeType.value
-    let filtered = filterPokemon(data, condition);
+    let filtered = window.filterPokemon(data, condition);
     pokebox.innerHTML = ''; // limpiando el div
     filtered.forEach(element => { //foreach es un for para array que devuelve un nuevo array con element que es igua a DATA[i]
         pokebox.innerHTML += `
@@ -75,7 +75,7 @@ pokeType.addEventListener('change', () => {// a mi poketype le paso el evento es
 })
 pokehuevo.addEventListener('change',() => {
 let condition = pokehuevo.value
-let filtrohuevo = filtereggs(data,condition);
+let filtrohuevo = window.filtereggs(data,condition);
 pokebox.innerHTML = '';// limpiando el div
 filtrohuevo.forEach(element => {
   pokebox.innerHTML += `
@@ -141,7 +141,7 @@ filtrohuevo.forEach(element => {
 //Conexion de los select para ordenar con funcion sortPokemon proveniente de data.js 
 pokeOrden.addEventListener('change', () => {
     let option = pokeOrden.value;
-     let ordering = sortPokemon(data, sortBy, option); //aqui va mi funcion order junto con sus parametros
+     let ordering = window.sortPokemon(data, 'name', option); //aqui va mi funcion order junto con sus parametros
      pokebox.innerHTML = '';
      ordering.forEach(element => { 
          pokebox.innerHTML += `
