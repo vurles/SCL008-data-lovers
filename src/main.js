@@ -128,7 +128,7 @@ filtrohuevo.forEach(element => {
   const result = num_3 * num_4 / 100;
 
   document.getElementById("num_5").value = result;
-}
+} 
 //termino de mi porcentaje
 
 // pokeOrden.addEventListener('change', () => {
