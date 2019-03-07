@@ -1,150 +1,139 @@
- <!DOCTYPE html>
-<html> 
+<!DOCTYPE html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" />
+    
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css">
   </head>
   <body>
-      <div class="container welcome" id="pag1">
-          <!-- div de bienvenidad  -->
+
+      <div class="container welcome">
           <header class="container menu">
-            <div class="row">
-              <div class="col-3">
-                <img class="logo" src="img/logo-nav.png" alt="pokemon_region_kanto">
+              <div class="row">
+                  <div class="col-3">
+                      <img class="logo" src="img/logo-nav.png" alt="pokemon_region_kanto">
+                  </div>
+                  <div class="col-9">
+                      <h1 class="titulo">LEARNING GO</h1>
+                  </div>
               </div>
-              <div class="col-9">
-                <h1 class="titulo">LEARNING GO</h1>
-              </div>
-             </div>
-              <div class="row pelota_rebote">
-                <div class="col-lg-4 col-sm-7">
-                    
-                    <section class="rebote"><!--section es como un div-->
-                        <img src="img/Pokeball - 480x480.png">
-                    
-                      </section>
-                </div>
-
-                <div class="col-lg-8 col-sm-5 ">
-                  <h3 class="intro">Somos una App.que permite a los jugadores principiantes, conocer mejor los 151 Pokemones de la Region Kanto</h3>
-                  <button type="button" class="btn btn-primary start" id="start">Comenzar</button>
-
-                </div>
-              </div>
-              
-              <footer class="menu"> 
-                  <button type="button" class="btn btn-primary start"><a href="https://www.youtube.com/watch?v=va6NFk1fFX4"></a>Tutorial para principiantes</button>
-                  <button type="button" class="btn btn-primary start"><a href="https://www.youtube.com/watch?v=N7WEy8nJ-6o"></a>Pokemones Region del Kanto</button>
-                </footer>
-              </header>
-            </div>
-          <!--fin pagina bienvenida-->
-       <section class="container" id="pag2">
-        <header class="container menu">
-            <div class="row">
-              <div class="col-3">
-                <img class="logo" src="img/logo-nav.png" alt="pokemon_region_kanto">
-              </div>
-              <div class="col-9 container">
-                <h1 class="titulo">LEARNING GO</h1>
-              </div>
-            </div>
           </header>
-      <div class="row">
-        <div class="col-9 container-fluid"  id="root" >
-          <!--aqui debe ir mi data-->
-        </div>
-        <div class="col-3 filtro">
-          <h3 class="">FILTROS</h3>
-          <hr/>
-          <select id="type">
-            <option value="0">Por tipo</option>
-            <option value="Water">Agua</option>
-            <option value="Bug">Bicho</option>
-            <option value="Dragon">Dragón</option>
-            <option value="Electric">Eléctrico</option>
-            <option value="Ghost">Fantasma</option>
-            <option value="Fire">Fuego</option>
-            <option value="Ice">Hielo</option>
-            <option value="Grass">Hierba</option>
-            <option value="Fighting">Luchador</option>
-            <option value="Normal">Normal</option>
-            <option value="Psychic">Psíquico</option>
-            <option value="Rock">Roca</option>
-            <option value="Ground">Tierra</option>
-            <option value="Poison">Veneno</option>
-            <option value="Flying">Volador</option>
-          </select> 
-          <hr/>
-          <select id="huevo">
-            <option value="0">Por Huevo</option>
-            <option value="Not in Eggs">Ninguno</option>
-            <option value="2 km">2 kilometro</option>
-            <option value="5 km">5 kilometro</option>
-            <option value="10 km">10 kilometro</option>
-          </select>
-          <hr/><!--sirve para separar textos o parrafos -->
-          <h3 class="">ORDENAR</h3>
-          <hr/>
-          <!-- segundo parametro-->
-          <select name="" id="orderpor">
-              <option value="0">OrdenarPor</option>
-              <option value="nombre">Nombre</option>
-              <option value="numero">Numero</option>
-            </select>   
-          <hr/>
-        
-           <!-- este es el selec donde mando tercer parametros para ordenar -->
-           <select name="" id="order">
-            <option value="0">Alfabeto/numero</option>
-            <option value="az">A a la Z</option>
-            <option value="za">Z a la A</option>
-            <option value="1-151">1 a el 151</option>
-            <option value="151-1">151 a el 1</option>
-          </select>
-          <hr/>
-            <h3 class="">CALCULO POR PORCENTAJE:</h3>
-          <hr/>
-          
-           <!--comienzo de mi calculo-->
-  <!--<input id="num_3" type="text"></input><label> % de</label>
-  <input id="num_4" type="text"></input><label>=</label>
-  <input id="num_5" type="text"></input>
+  <!-- div de bienvenidad  -->
+  <div class="container">
+      <div class="row pelota_rebote" id="pag1">
+          <div class="col-lg-4 col-sm-7">
+              <div class="rebote">
+                      <img src="img/Pokeball.png" alt="bolapokemon">
+              </div>
+          </div>
+          <div class="col-lg-8 col-sm-5 ">
+              <h3 class="intro">Somos una App.que permite a los jugadores principiantes, conocer mejor los 151 Pokemones de la Region Kanto</h3>
+              <button type="button" class="btn btn-primary start" id="start">Comenzar</button>
+          </div>
+      </div><!--fin de mi row bienvenida-->
+    </div>     <!--fin pagina bienvenida-->
+            
+          <!-- aqui van mis filtros y muestro la data-->
+      <section class="container poke" id="pag2">
+          <div class="row filtro">
+              <div class="col-sm-12 col-md-4 col-lg-4"><!-- ordenar -->
+                <h3 class="">ORDENAR</h3>
+                <hr/>
+                <!-- segundo parametro-->
+                <select id="orderpor">
+                    <option value="0">OrdenarPor</option>
+                    <option value="nombre">Nombre</option>
+                    <option value="numero">Numero</option>
+                    </select>   
+                <hr/>
+                    
+                <!-- este es el selec donde mando tercer parametros para ordenar -->
+                <select id="order">
+                    <option value="0">Alfabeto/numero</option>
+                    <option value="az">A a la Z</option>
+                    <option value="za">Z a la A</option>
+                    <option value="1-151">1 a el 151</option>
+                    <option value="151-1">151 a el 1</option>
+                </select>
+                <hr/>
 
-  <button onclick="porcentaje();">Calcular</button><br><br>-->
-  <!--termino de mi calculo-->
-        
-          <hr/>
-          
-         </div>
+              </div>
+              <div class="col-sm-12 col-md-4 col-lg-4"><!--div filtro-->
+                  <h3 class="">FILTROS</h3>
+                  <hr/>
+                  <select id="type">
+                      <option value="0">Por tipo</option>
+                      <option value="Water">Agua</option>
+                      <option value="Bug">Bicho</option>
+                      <option value="Dragon">Dragón</option>
+                      <option value="Electric">Eléctrico</option>
+                      <option value="Ghost">Fantasma</option>
+                      <option value="Fire">Fuego</option>
+                      <option value="Ice">Hielo</option>
+                      <option value="Grass">Hierba</option>
+                      <option value="Fighting">Luchador</option>
+                      <option value="Normal">Normal</option>
+                      <option value="Psychic">Psíquico</option>
+                      <option value="Rock">Roca</option>
+                      <option value="Ground">Tierra</option>
+                      <option value="Poison">Veneno</option>
+                      <option value="Flying">Volador</option>
+                  </select> 
+                  <hr/>
+                  <select id="huevo">
+                      <option value="0">Por Huevo</option>
+                      <option value="Not in Eggs">Ninguno</option>
+                      <option value="2 km">2 kilometro</option>
+                      <option value="5 km">5 kilometro</option>
+                      <option value="10 km">10 kilometro</option>
+                  </select>
+                  <hr/><!--sirve para separar textos o parrafos --> 
+              </div>
+              <div class="col-sm-12 col-md-4 col-lg-4"><!-- calculo-->
+                <h3 class="">CALCULO POR PORCENTAJE:</h3>
+                  <hr/>
+                              
+                  <!--comienzo de mi calculo-->
+                  <input id="num_3" type="text">
+                  <label> % de</label>
+                  <input id="num_4" type="text"> 
+                  <label>=</label>
+                  <input id="num_5" type="text">
+      
+                  <button onclick="porcentaje();">Calcular</button>
+                  <!--termino de mi calculo-->
+                  <hr/>
+              </div>
+
+            </div> <!-- cierre de mi div row  que contiene 3 div de col-4 orden, filtro y calculo-->
+
+            <div class="row"> <!-- row data-->
+                <div class="col-12 container-image" id="root">
+                    <button id="scrollToTop" class="scrollToTop"><!--boton que va al inicio de la pagina llegar al final de la pagina -->
+                      <img src="img/Pokemon_Go_Arrow_icon-icons.com_67522.png" alt="flechapokemon">
+                        <!-- <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+                         <path d="M0 0h24v24H0z" fill="none"/>-->
+                   </button>
+                </div>
+          </div>
+          </section>               
+     <!-- cierre de mi div container welcome -->
+      <footer class="menu"> 
+          <div class="row">
+              <div class="col-6 col-sm-6">
+                <a href="https://www.youtube.com/watch?v=N7WEy8nJ-6o" class="btn btn-primary start">Pokemones Region del Kanto</a>
+              </div>
+              <div class="col-6 col-sm-6">
+                <a href="https://www.youtube.com/watch?v=va6NFk1fFX4" class="btn btn-primary start">Tutorial para principiantes</a>
+              </div>
+          </div>
+      </footer>
       </div>
-      
- 
-      <div>
-          <button id="scrollToTop" class="scrollToTop"><!--boton que va al inicio de la pagina llegar al final de la pagina -->
-            <!--<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
-               <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
-               <path d="M0 0h24v24H0z" fill="none"/>
-            </svg>-->
-         </button>
-        </div>
-        <footer class="menu"> 
-            <button type="button" class="btn btn-primary start"><a href="https://www.youtube.com/watch?v=va6NFk1fFX4"></a>Tutorial para principiantes</button>
-            <button type="button" class="btn btn-primary start"><a href="https://www.youtube.com/watch?v=N7WEy8nJ-6o"></a>Pokemones Region del Kanto</button>
-          </footer>
-    </section>
-    
-    
-    <button><a href=""></a></button>
-    
-    <!-- 
-      
-    -->
-
 
 
 

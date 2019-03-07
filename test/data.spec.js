@@ -3,7 +3,6 @@ global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
-
 describe('filtereggs', () => {//aqui a quien quiero testear
   
   it('debería ser una función', () => {//que voy a testear
@@ -20,3 +19,4 @@ describe('sortPokemon',() => {
     assert.equal(typeof sortPokemon, 'function');
   });
 });
+

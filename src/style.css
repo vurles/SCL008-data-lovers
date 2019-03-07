@@ -37,7 +37,7 @@ margin-top: 8%;
 .tituloPoke{
     margin-top: 8%;
 }
-.container-fluid{
+.container-image{
     flex-flow: row wrap;
     display: flex;
     justify-content: space-evenly;
@@ -46,9 +46,9 @@ margin-top: 8%;
 }
 .pelota_rebote{
   background-color: rgb(86, 242, 247);
-
 }
-/* efecto rebote pelota pokemon*/
+
+ /*efecto rebote pelota pokemon*/
 .rebote img{
   width: 250px;
   height: 250px;
@@ -82,6 +82,7 @@ margin-top: 8%;
 }
 /* Fin efecto rebote pelota pokemon*/
 .start{
+  margin-top: 10px;
   margin-left: 20%;
   background-color: #3D58E2;
   font-family: 'Luckiest Guy', cursive;
@@ -94,8 +95,8 @@ margin-top: 8%;
   padding: 8%;
 
 }
-.filtro{
-    background-color:rgb(230, 205, 230);
+.filtro {
+    background-image: url('img/whosthatpokemon_1349921665_7.jpg');
 }
 .menu{
     background-color: gray;
@@ -104,7 +105,7 @@ margin-top: 8%;
 .scrollToTop {
     outline: none;
     border: none;
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
     position: fixed;
     opacity: 0;
@@ -113,13 +114,11 @@ margin-top: 8%;
     transition: visibility 0.3s, opacity 0.3s, background 0.3s, -webkit-transform 0.3s;
     transition: transform 0.3s, visibility 0.3s, opacity 0.3s, background 0.3s;
     transition: transform 0.3s, visibility 0.3s, opacity 0.3s, background 0.3s, -webkit-transform 0.3s;
-    -webkit-transform: translateY(-2em);
-            transform: translateY(-2em);
     background-color: rgba(0, 0, 0, 0.85);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 7px rgba(0, 0, 0, 0.25);
-    bottom: 1em;
-    right: 1em;
-    padding: 0.5em;
+    bottom: 3px;
+    right: 3px;
+    padding: 3px;
     border-radius: 4px;
   }
   .scrollToTop svg {
@@ -165,7 +164,7 @@ margin-top: 8%;
   backface-visibility: hidden;
   border-color: black;
   border: 5px;
-    background-color: rgb(230, 205, 230);
+  background-image: url('img/whosthatpokemon_1349921665_7.jpg');
   width: 300px;
   height: 250px;
   text-align: center;
@@ -183,3 +182,13 @@ margin-top: 8%;
     font-size: 15px; 
   }
 }
+.pokeinfo{
+  text-align: left;
+}
+/*.poke{
+  background-image: url('img/depositphotos_120226496-stock-illustration-pokemon-go-pokeball-seamless-texture.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 500px;
+}*/
+
