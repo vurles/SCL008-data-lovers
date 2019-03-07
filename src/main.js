@@ -122,13 +122,13 @@ filtrohuevo.forEach(element => {
   //})
  // termino de mi implementacion de calculo por peso//
  //inicio de mi porcentaje
- function porcentaje() {
-  const num_3 = document.getElementById("num_3").value;
-  const num_4 = document.getElementById("num_4").value;
-  const result = num_3 * num_4 / 100;
+ //function porcentaje() {
+ //const num_3 = document.getElementById("num_3").value;
+ //const num_4 = document.getElementById("num_4").value;
+ //const result = num_3 * num_4 / 100;
 
-  document.getElementById("num_5").value = result;
-} 
+ //document.getElementById("num_5").value = result;
+//} 
 //termino de mi porcentaje
 
 // pokeOrden.addEventListener('change', () => {
