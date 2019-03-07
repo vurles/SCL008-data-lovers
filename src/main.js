@@ -68,7 +68,6 @@ pokeType.addEventListener('change', () => {// a mi poketype le paso el evento es
             <img src="${element.img}">
             <div class="pokeinfo">
             <p>Tipo: ${element.type}</p>
-            <p>Evolucion: ${element.next_evolution[0].name}, ${element.next_evolution[1].name} </p>
             <p>Debilidad: ${element.weaknesses}</p>
             <p> Candy: ${element.candy}</p>
           </div>
