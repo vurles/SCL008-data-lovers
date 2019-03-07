@@ -1,7 +1,7 @@
-.container{
+/* .container{
   padding: 0px;
   margin: 0px auto;
-}
+} */
 
 h1, h2, h3, p {
     font-family: 'Luckiest Guy', cursive;
@@ -174,7 +174,7 @@ margin-top: 8%;
 .cara.detras {
   transform: rotateY(180deg);
 } 
-/* resposive*/
+ /* resposive */
 @media only screen and (max-width: 600px) {
   .start{
     margin-left: 0px;
