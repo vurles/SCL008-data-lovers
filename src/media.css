@@ -1,0 +1,17 @@
+@media(max-width: 567px) and (min-width: 320px){
+    .rebote img {
+        width: 200px;
+        height: 200px;
+    }
+    .carta-box{
+        width: 200px;
+        height: 200px;
+    }
+    .carta{
+        width: 200px;
+        padding-top: 10px;
+    }
+    .cara{
+        width: 200px;
+    }
+}

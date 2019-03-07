@@ -36,10 +36,12 @@ const seeData = (data) => {
                         <img src="${element.img}">
                       </div>
                       <div class="cara detras">
-                        <img src="${element.img}">
-                        <p>Tipo: ${element.type}</p>
-                        <p>Debilidad: ${element.weaknesses}</p>
-                        <p> Candy: ${element.candy}</p>
+                          <img src="${element.img}">
+                          <div class="pokeinfo">
+                          <p>Tipo: ${element.type}</p>
+                          <p>Debilidad: ${element.weaknesses}</p>
+                          <p> Candy: ${element.candy}</p>
+                        </div> 
                       </div>    
                     </div>
                   </div>
@@ -64,9 +66,12 @@ pokeType.addEventListener('change', () => {// a mi poketype le paso el evento es
           </div>  
           <div class="cara detras">
             <img src="${element.img}">
+            <div class="pokeinfo">
             <p>Tipo: ${element.type}</p>
+            <p>Evolucion: ${element.next_evolution[0].name}, ${element.next_evolution[1].name} </p>
             <p>Debilidad: ${element.weaknesses}</p>
             <p> Candy: ${element.candy}</p>
+          </div>
           </div>    
         </div>
       </div>
@@ -125,10 +130,10 @@ filtrohuevo.forEach(element => {
  function porcentaje() {
   const num_3 = document.getElementById("num_3").value;
   const num_4 = document.getElementById("num_4").value;
-  const result = num_3 * num_4 / 100;
+   const result = num_3 * num_4 / 100;
 
   document.getElementById("num_5").value = result;
-} 
+ } 
 //termino de mi porcentaje
 
 // pokeOrden.addEventListener('change', () => {

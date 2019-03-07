@@ -18,6 +18,7 @@ const filterPokemon = (DATA, condition) => { //data ?
   })
   return filteredPoke;
 };
+
 const filtereggs = (data,condition) => {
   let filterhuevo = data.filter(element => {
     return element.egg.includes(condition)
