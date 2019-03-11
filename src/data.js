@@ -102,22 +102,22 @@ esto es del MDN para ordenar segun criterio que le pase en mis condiciones
  * 
  * 
  */
-const computeTypes = (data) => {
-  const types = {};
+// const computeTypes = (data) => {
+//   const types = {};
 
-  data.forEach(pokemon => {
-    pokemon.type.forEach(t => {
-      if (!types.hasOwnProperty(t)) {
-        types[t] = 0;
-      }
+//   data.forEach(pokemon => {
+//     pokemon.type.forEach(t => {
+//       if (!types.hasOwnProperty(t)) {
+//         types[t] = 0;
+//       }
   
-      types[t]++;
-    })
-  });
+//       types[t]++;
+//     })
+//   });
 
-  Object.keys(types).forEach(type => {
-    types[type] = parseInt((types[type] / window.pokemon.pokemon.length) * 100);
-  });
+//   Object.keys(types).forEach(type => {
+//     types[type] = parseInt((types[type] / window.pokemon.pokemon.length) * 100);
+//   });
 
-  return types;
-}
+//   return types;
+// }
