@@ -73,11 +73,24 @@ const filtereggs = (data,condition) => {
   return orderPoke;
 }
 
+const total = (Data, condition) => {
+  let counter=0;
+  Data.forEach(element => {
+      if (element.type.includes(condition)){
+          counter=counter+1;
+      }
+  }); 
+  return Math.round((counter/151)*100) +"%"; 
+     //al contador se la pasa la regla de 3 para sacar el porcentaje y luego se redondea con Math.round al numero mas cercano.
+}
+
+
 
 
 window.filterPokemon =filterPokemon;
 window.filtereggs =filtereggs;
 window.sortPokemon =sortPokemon;
+window.total = total;
 /**
  * *const order = () => {
 

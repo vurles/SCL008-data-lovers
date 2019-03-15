@@ -7,10 +7,9 @@ const pokeType = document.getElementById('type'); // llamo a mi select para pode
 
 const pokehuevo = document.getElementById('huevo');//llamo a mi id huevo que esta en html
 
+const calculo = document.getElementById('compu');
+
 //const pokeweight = document.getElementById('weight');//calculo por peso y lo llamo desde mi html
-
-
-
 
 const pokeOrden = document.getElementById('order');
 
@@ -50,10 +49,12 @@ const seeData = (data) => {
     });
     return result;
 };
+
 pokeType.addEventListener('change', () => {// a mi poketype le paso el evento escuchar 
-    let condition = pokeType.value
+    let condition = pokeType.value;
     let filtered = window.filterPokemon(data, condition);
-    pokebox.innerHTML = ''; // limpiando el div
+     pokebox.innerHTML = '';
+     // limpiando el div
     filtered.forEach(element => { //foreach es un for para array que devuelve un nuevo array con element que es igua a DATA[i]
         pokebox.innerHTML += `
         <div class="carta-box">
@@ -69,14 +70,29 @@ pokeType.addEventListener('change', () => {// a mi poketype le paso el evento es
             <div class="pokeinfo">
             <p>Tipo: ${element.type}</p>
             <p>Debilidad: ${element.weaknesses}</p>
-            <p> Candy: ${element.candy}</p>
+            <p> Candy: ${element.candy}</p> 
           </div>
           </div>    
         </div>
       </div>
         `
-    })
+    });
+   
 })
+pokeType.addEventListener('change', () =>{
+  let condition = pokeType.value;
+  let porcentaje  = window.total(data,condition);
+  //.log(porcentaje)
+  calculo.innerHTML ='';
+    calculo.innerHTML+=`
+    <div>
+    <h4>El porcentaje total de pokemones es de ${porcentaje} </h4>
+    </div>
+`
+  
+})
+
+
 pokehuevo.addEventListener('change',() => {
 let condition = pokehuevo.value
 let filtrohuevo = window.filtereggs(data,condition);
@@ -127,13 +143,13 @@ filtrohuevo.forEach(element => {
  // termino de mi implementacion de calculo por peso//
  //inicio de mi porcentaje
 
- function porcentaje() {
-  const num_3 = document.getElementById("num_3").value;
-  const num_4 = document.getElementById("num_4").value;
-   const result = num_3 * num_4 / 100;
+//  function porcentaje() {
+//   const num_3 = document.getElementById("num_3").value;
+//   const num_4 = document.getElementById("num_4").value;
+//    const result = num_3 * num_4 / 100;
 
-  document.getElementById("num_5").value = result;
- } 
+//   document.getElementById("num_5").value = result;
+//  } 
 
 //termino de mi porcentaje
 
