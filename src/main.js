@@ -1,6 +1,26 @@
-/* Manejo del DOM */
-const data = window.POKEMON.pokemon;//me traigo la data de pokemon y la guargo en una const
+/* Manejo del DOM 
+const data = window.POKEMON.pokemon;*///me traigo la data de pokemon y la guargo en una const
 //console.log(DATA);
+const pokeData = () => {
+  fetch ('./data/pokemon/pokemon.json')
+  .then(response => {
+      return response.json()
+  })
+  .then(data => {
+      //console.log(data.pokemon)
+      seeData(data.pokemon);//aqui hago el llamado de mis funciones 
+      //console.log(seeData());
+
+  })
+  .catch(error => error)
+}
+
+window.onload = pokeData();
+/**
+ * fin de fetch
+ */
+
+
 const pokebox = document.getElementById('root'); // creo una constatante para llammar a mi contenedor root
 
 const pokeType = document.getElementById('type'); // llamo a mi select para poder filtrar por el valor que me da
@@ -9,8 +29,6 @@ const pokehuevo = document.getElementById('huevo');//llamo a mi id huevo que est
 
 const calculo = document.getElementById('compu');
 
-//const pokeweight = document.getElementById('weight');//calculo por peso y lo llamo desde mi html
-
 const pokeOrden = document.getElementById('order');
 
 //hola vamos a mostrar pagina 1 y 2 a travez de display none y display block 
@@ -18,13 +36,12 @@ document.getElementById("start").addEventListener("click",(evento)=>{
   evento.preventDefault();
   document.getElementById("pag1").style.display="none";// el que se muestra primero
   document.getElementById("pag2").style.display="block";// esta forma hace que se vea en bloques las paginas
-
 })
 
-const seeData = (data) => {
+const seeData = (pokeData) => {
 
     let result = '';
-    data.forEach(element => {//element es === a DAATA[i]
+    pokeData.forEach(element => {//element es === a DAATA[i]
         result = pokebox.innerHTML += `
         <div class="carta-box">
                     <div class="carta">    
@@ -52,7 +69,7 @@ const seeData = (data) => {
 
 pokeType.addEventListener('change', () => {// a mi poketype le paso el evento escuchar 
     let condition = pokeType.value;
-    let filtered = window.filterPokemon(data, condition);
+    let filtered = filterPokemon(pokeData, condition);
      pokebox.innerHTML = '';
      // limpiando el div
     filtered.forEach(element => { //foreach es un for para array que devuelve un nuevo array con element que es igua a DATA[i]
@@ -81,7 +98,7 @@ pokeType.addEventListener('change', () => {// a mi poketype le paso el evento es
 })
 pokeType.addEventListener('change', () =>{
   let condition = pokeType.value;
-  let porcentaje  = window.total(data,condition);
+  let porcentaje  = total(pokeData,condition);
   //.log(porcentaje)
   calculo.innerHTML ='';
     calculo.innerHTML+=`
@@ -95,7 +112,7 @@ pokeType.addEventListener('change', () =>{
 
 pokehuevo.addEventListener('change',() => {
 let condition = pokehuevo.value
-let filtrohuevo = window.filtereggs(data,condition);
+let filtrohuevo = window.poke.filtereggs(pokeData,condition);
 pokebox.innerHTML = '';// limpiando el div
 filtrohuevo.forEach(element => {
   pokebox.innerHTML += `
@@ -163,7 +180,7 @@ filtrohuevo.forEach(element => {
 //Conexion de los select para ordenar con funcion sortPokemon proveniente de data.js 
 pokeOrden.addEventListener('change', () => {
     let option = pokeOrden.value;
-     let ordering = window.sortPokemon(data, 'name', option); //aqui va mi funcion order junto con sus parametros
+     let ordering = window.poke.sortPokemon(pokeData, 'name', option); //aqui va mi funcion order junto con sus parametros
      pokebox.innerHTML = '';
      ordering.forEach(element => { 
          pokebox.innerHTML += `
@@ -187,4 +204,3 @@ pokeOrden.addEventListener('change', () => {
 })
 
 
-window.onload = seeData(data);
